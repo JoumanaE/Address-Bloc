@@ -21,7 +21,6 @@ class MenuController
      puts "You picked #{selection}"
    end
  end
-
  case selection
  when 1
    system "clear"
@@ -45,20 +44,30 @@ class MenuController
    main_menu
  when 6
    puts "Good-bye!"
-
    exit(0)
-  else
-    system "clear"
+ else
+   system "clear"
     puts "Sorry, that is not a valid input"
     main_menu
   end
 end
-  def view_all_entries
+def view_all_entries
     @address_book.entries.each do |entry|
     system "clear"
     puts entry.to_s
     entry_submenu(entry)
   end
+
+  def view_entry_n(n)
+    @address_book.entries.each do |entry| do
+      gets.to_n
+      if @address_book.entries.count = n
+        puts "You chose #{entry}"
+      else
+        puts "Entry not valid, try again"
+      end
+      end
+    end
 
   def create_entry
     system"clear"
@@ -76,10 +85,8 @@ end
     @address_book.entries.each do |entry|
       system "clear"
       puts entry.to_s
-
-      def
-
-      def endentry_submenu(entry)
+    end
+    def endentry_submenu(entry)
         puts "n - next entry"
         puts "d - delete entry"
         puts "e - edit this entry"
@@ -99,16 +106,6 @@ end
           entries_submenu(entry)
         end
       end
-      def view_entry_n(n)
-        @address_book.entries.each do |entry| do
-           gets.to_n
-           if @address_book.entries.count = n
-             puts "You chose #{entry}"
-           else
-             puts "Entry not valid, try again"
-        end
-      end
-    end
     system "clear"
     puts "End of entries"
   end
