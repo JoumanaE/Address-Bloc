@@ -58,7 +58,7 @@ def view_all_entries
     entry_submenu(entry)
   end
 
-  def view_entry_n(n)
+def view_entry_n(n)
     @address_book.entries.each do |entry| do
       gets.to_n
       if @address_book.entries.count = n
@@ -69,7 +69,7 @@ def view_all_entries
       end
     end
 
-  def create_entry
+ def create_entry
     system"clear"
     puts" NewAddressBloc Entry"
     print "Name:"
@@ -81,11 +81,11 @@ def view_all_entries
     puts "New entry created"
   end
 
-  def search_entries
+ def search_entries
     @address_book.entries.each do |entry|
       system "clear"
       puts entry.to_s
-    end
+ end
     def endentry_submenu(entry)
         puts "n - next entry"
         puts "d - delete entry"
