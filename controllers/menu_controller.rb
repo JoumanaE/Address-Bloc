@@ -110,6 +110,12 @@ def view_all_entries
     puts "End of entries"
   end
   end
+   def demolish(entry)
+      @address_book.entries.each do |entry|
+        @address_book.entries.delete(entry)
+        puts " All entries deleted"
+      end
+   end
   def read_csv
   end
 end
